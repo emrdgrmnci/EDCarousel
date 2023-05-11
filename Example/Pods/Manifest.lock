@@ -1,0 +1,16 @@
+PODS:
+  - EDCarousel (0.0.1)
+
+DEPENDENCIES:
+  - EDCarousel (from `../EDCarousel`)
+
+EXTERNAL SOURCES:
+  EDCarousel:
+    :path: "../EDCarousel"
+
+SPEC CHECKSUMS:
+  EDCarousel: 758aeba7c487c52572d9a7faf80937d0b58e97ee
+
+PODFILE CHECKSUM: f67e518b51ac81c4c4286cf0b518db5f1a6cca1d
+
+COCOAPODS: 1.11.3
