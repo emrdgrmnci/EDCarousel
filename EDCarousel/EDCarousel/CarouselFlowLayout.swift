@@ -95,7 +95,11 @@ public class CarouselFlowLayout: UICollectionViewFlowLayout {
         let scale = ratio * (1 - sideItemScale) + sideItemScale
         let shift = (1 - ratio) * sideItemShift
         attributes.alpha = alpha
-        attributes.transform3D = CATransform3DScale(CATransform3DIdentity, scale, scale, 1)
+        let visibleRect = CGRect(origin: collectionView.contentOffset, size: collectionView.bounds.size)
+        let dist = (attributes.frame.midX - visibleRect.midX)
+        var transform = CATransform3DScale(CATransform3DIdentity, scale, scale, 1)
+        transform = CATransform3DTranslate(transform, 0, 0, -abs(dist / 1_000))
+        attributes.transform3D = transform
         attributes.zIndex = Int(alpha * 10)
 
         if isHorizontal {
