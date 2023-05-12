@@ -42,14 +42,14 @@
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7825A90E082A1582EB16256B0E722B3F /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
 		92F82C7C90B5246C4E4610BE78AF5073 /* EDCarousel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EDCarousel-Info.plist"; sourceTree = "<group>"; };
-		98795CE0A046624044B62E0E661CD849 /* EDCarousel.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = EDCarousel.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		98795CE0A046624044B62E0E661CD849 /* EDCarousel.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = EDCarousel.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AFECBC24E09D0D25F822C27BD944AFD4 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
 		B45138496B85A072654D1D0F8EBBEDE5 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B64BD7037A67929DD6D59A589D85DE46 /* EDCarousel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EDCarousel-umbrella.h"; sourceTree = "<group>"; };
 		BA51500F3F04D498DD97EDA143300CDD /* EDCarousel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EDCarousel-dummy.m"; sourceTree = "<group>"; };
 		BC5BF0BF4B9357C10530309DA98650E6 /* CarouselFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CarouselFlowLayout.swift; path = EDCarousel/CarouselFlowLayout.swift; sourceTree = "<group>"; };
-		CF7CA1E237F9DD7AE6034A909033C0CA /* EDCarousel */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EDCarousel; path = EDCarousel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF7CA1E237F9DD7AE6034A909033C0CA /* EDCarousel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EDCarousel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D7C498FA339E02BD53ECB8916CEA8E /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
 		EA21B344259B58996DB73382B1B1521F /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		F5A3C619CB2229880D6DDE3008DD9F92 /* EDCarousel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EDCarousel.debug.xcconfig; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 		FC0D5BC87838147BC27319C7C9DA98AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CF7CA1E237F9DD7AE6034A909033C0CA /* EDCarousel */,
+				CF7CA1E237F9DD7AE6034A909033C0CA /* EDCarousel.framework */,
 				1F667CC0E19EAF34E5A4119E2121F585 /* Pods-Example */,
 			);
 			name = Products;
@@ -245,7 +245,7 @@
 			);
 			name = EDCarousel;
 			productName = EDCarousel;
-			productReference = CF7CA1E237F9DD7AE6034A909033C0CA /* EDCarousel */;
+			productReference = CF7CA1E237F9DD7AE6034A909033C0CA /* EDCarousel.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */

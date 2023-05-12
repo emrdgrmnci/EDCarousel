@@ -1,0 +1,17 @@
+{
+  "images" : [
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "arrow_left_white.svg",
+      "idiom" : "universal"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

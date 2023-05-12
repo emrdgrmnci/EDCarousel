@@ -1,24 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HeR-pR-vWy">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tiT-bq-h3D">
+                                <rect key="frame" x="20" y="95" width="353" height="658.33333333333337"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J42-fn-U6m" customClass="CarouselFlowLayout" customModule="EDCarousel">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alH-rO-Z4S">
+                                <rect key="frame" x="16" y="804" width="24" height="14"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="didTapOnPreviousButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c06-er-2Cd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qF-dx-dOX">
+                                <rect key="frame" x="353" y="804" width="24" height="14"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="didTapOnNextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fI2-ZC-4Qr"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="kQs-7Q-rCS" customClass="CustomPageControl" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="107" y="763" width="179" height="26"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="currentPageImage" value="currentpageindicator"/>
+                                </userDefinedRuntimeAttributes>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIP-3B-EsN">
+                                <rect key="frame" x="380" y="52" width="16" height="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="close"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="luM-Oi-AA9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="luM-Oi-AA9" firstAttribute="trailing" secondItem="kQs-7Q-rCS" secondAttribute="trailing" constant="107" id="4fT-og-HVo"/>
+                            <constraint firstItem="alH-rO-Z4S" firstAttribute="top" secondItem="kQs-7Q-rCS" secondAttribute="bottom" constant="15" id="6K6-Wh-cEa"/>
+                            <constraint firstItem="luM-Oi-AA9" firstAttribute="trailing" secondItem="4qF-dx-dOX" secondAttribute="trailing" constant="16" id="8BS-DB-HmJ"/>
+                            <constraint firstItem="alH-rO-Z4S" firstAttribute="leading" secondItem="luM-Oi-AA9" secondAttribute="leading" constant="16" id="BDI-eC-l2X"/>
+                            <constraint firstItem="4qF-dx-dOX" firstAttribute="bottom" secondItem="luM-Oi-AA9" secondAttribute="bottom" id="NM8-cN-kKP"/>
+                            <constraint firstItem="luM-Oi-AA9" firstAttribute="trailing" secondItem="ZIP-3B-EsN" secondAttribute="trailing" constant="18" id="YBe-gy-NAg"/>
+                            <constraint firstItem="ZIP-3B-EsN" firstAttribute="top" secondItem="luM-Oi-AA9" secondAttribute="top" constant="4" id="eCT-AI-wpS"/>
+                            <constraint firstItem="kQs-7Q-rCS" firstAttribute="leading" secondItem="luM-Oi-AA9" secondAttribute="leading" constant="107" id="kpC-Cs-MTu"/>
+                            <constraint firstItem="alH-rO-Z4S" firstAttribute="bottom" secondItem="luM-Oi-AA9" secondAttribute="bottom" id="l3f-tR-MpC"/>
+                            <constraint firstItem="kQs-7Q-rCS" firstAttribute="top" secondItem="tiT-bq-h3D" secondAttribute="bottom" constant="9.6666666666666288" id="q1v-Mo-fmE"/>
+                            <constraint firstItem="tiT-bq-h3D" firstAttribute="top" secondItem="ZIP-3B-EsN" secondAttribute="bottom" constant="18" id="qUo-iP-4cX"/>
+                            <constraint firstItem="tiT-bq-h3D" firstAttribute="leading" secondItem="luM-Oi-AA9" secondAttribute="leading" constant="20" id="wJN-QO-Leo"/>
+                            <constraint firstItem="luM-Oi-AA9" firstAttribute="trailing" secondItem="tiT-bq-h3D" secondAttribute="trailing" constant="20" id="zwx-HF-BYt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="closeButton" destination="ZIP-3B-EsN" id="KRg-OJ-7Mv"/>
+                        <outlet property="collectionView" destination="tiT-bq-h3D" id="rxm-a0-gZk"/>
+                        <outlet property="nextButton" destination="4qF-dx-dOX" id="QRB-IG-q2H"/>
+                        <outlet property="pageControl" destination="kQs-7Q-rCS" id="uAQ-Dh-0SZ"/>
+                        <outlet property="previousButton" destination="alH-rO-Z4S" id="u73-pC-ob5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="81.679389312977094" y="4.9295774647887329"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="close" width="128" height="128"/>
+        <image name="currentpageindicator" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
