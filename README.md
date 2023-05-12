@@ -20,7 +20,7 @@ pod install EDCarousel
 
 https://github.com/emrdgrmnci/EDCarousel/tree/main/Example
 
-![Visual](https://github.com/emrdgrmnci/EDCarousel/blob/main/visual.svg "step-1")
+![Visual](https://github.com/emrdgrmnci/EDCarousel/blob/main/visual.gif "")
 
 ## Usage
 #### via Interface Builder
