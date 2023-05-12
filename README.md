@@ -13,7 +13,7 @@
 To install using Cocoapods, clone this repo and go to Example directory then run the following command:
 
 ```swift
-pod install EDCarousel
+pod install
 ```
 
 ## Example
