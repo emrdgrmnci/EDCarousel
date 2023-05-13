@@ -30,27 +30,21 @@ Set the UICollectionView layout class to CarouselFlowLayout as given below.
 ![Alt text](https://github.com/emrdgrmnci/EDCarousel/blob/main/usage.png "step-1")
 
 #### Detect current indexPath or page while scrolling
-* If you continue to track which current(center) indexPath then use scrollViewDidScroll delegate method. This method called on any offset changes. 
+
+* After scrolling end with left or right then you can use the scrollViewWillEndDragging delegate method. This method called when scroll view grinds to a halt.
 ```
-func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if let indexPath = centerFlowLayout.currentCenteredIndexPath {
-            print("Current IndexPath: \(indexPath)")
-        }
-        if let page = centerFlowLayout.currentCenteredPage {
-            print("Current Page: \(page)")
-        }
-    }
-```
-* After scrolling end with left or right then you can use the scrollViewDidEndDecelerating delegate method. This method called when scroll view grinds to a halt.
-```
-// 
-func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        if let indexPath = centerFlowLayout.currentCenteredIndexPath {
-            print("Current IndexPath: \(indexPath)")
-        }
-        if let page = centerFlowLayout.currentCenteredPage {
-            print("Current Page: \(page)")
-        }
+func scrollViewWillEndDragging(
+        _: UIScrollView,
+        withVelocity _: CGPoint,
+        targetContentOffset: UnsafeMutablePointer<CGPoint>
+    ) {
+        let targetOffset = targetContentOffset.pointee.x
+        let width = (collectionView.frame.size.width - padding) / 1.21
+        let rounded = Double((images.count / 2)) * abs(targetOffset / width)
+        let scale = round(rounded)
+        pageControl.currentPage = Int(scale)
+        updateButtonStates(with: pageControl.currentPage)
+        updateUI(with: pageControl.currentPage)
     }
 ```
 
