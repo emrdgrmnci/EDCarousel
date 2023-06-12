@@ -113,6 +113,28 @@ collectionView.scrollToItem(
         )
 ```
 
+#### UICollectionView Extension Usage Example
+Here's an example of how you can use these extension methods:
+
+```
+// Register cell class
+collectionView.register(MyCell.self)
+
+// Register cell with nib file
+collectionView.registerNib(MyNibCell.self, bundle: nil)
+
+// Dequeue cell
+if let cell = collectionView.dequeue(MyCell.self, for: indexPath) {
+    // Configure and use the dequeued cell
+} else {
+    // Handle the case where the dequeued cell is not of the expected class
+}
+```
+In the example above, MyCell and MyNibCell represent the cell classes you ßwant to register and dequeue in the collection view.
+
+##### Conclusion
+The UICollectionView extension provides convenient methods for registering and dequeuing cells in a collection view. These methods simplify the process of working with collection view cells, making it easier to manage and reuse cells in your application.
+
 ## Contributing
 
 Feel free to open an issue if you have questions about how to use `EDCarousel`, discovered a bug, or want to improve the implementation or interface.
